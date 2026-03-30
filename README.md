@@ -9,7 +9,7 @@ Software Engineering Project
 - Email: jkryeziu25@epoka.edu.al
 
 ## Team Members:
-1. Blerta Kera - GitHub: blertakera - Email: bkera25@epoka.edu.al 
+1. Blerta Kera - GitHub: bkera25-dot - Email: bkera25@epoka.edu.al 
 2. Suada Xhameta - GitHub: suadaxhameta1 - Email: sxhameta25@epoka.edu.al
 3. Enisa Cela - GitHub: enisacela - Email: encela25@epoka.edu.al
 4. Flai Mucka - GitHub: fmucka25-arch - Email: fmucka25@epoka.edu.al
