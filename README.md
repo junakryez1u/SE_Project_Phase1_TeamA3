@@ -10,7 +10,7 @@ Software Engineering Project
 
 ## Team Members:
 1. Blerta Kera - GitHub: blertakera - Email: bkera25@epoka.edu.al 
-2. Suada Xhameta - GitHub: suadaxhameta - Email: sxhameta25@epoka.edu.al
+2. Suada Xhameta - GitHub: suadaxhameta1 - Email: sxhameta25@epoka.edu.al
 3. Enisa Cela - GitHub: enisacela - Email: encela25@epoka.edu.al
 4. Flai Mucka - GitHub: fmucka25-arch - Email: fmucka25@epoka.edu.al
 
@@ -48,9 +48,9 @@ The application will be a web or mobile platform where users can register, post 
 1.Juna Kryeziu - Responsible for managing the project, coordinating team members, tracking progress, and ensuring deadlines are met.
 
 ## Team Members:
-1. Blerta Kera - Frontend Developer   
-2. Suada Xhameta - Backend Developer 
-3. Enisa Cela - QA & Documentation 
-4. Flai Mucka - UI/UX designer 
+2. Blerta Kera - Frontend Developer   
+3. Suada Xhameta - Backend Developer 
+4. Enisa Cela - QA & Documentation 
+5. Flai Mucka - UI/UX designer 
 
 
