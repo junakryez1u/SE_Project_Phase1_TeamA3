@@ -56,3 +56,32 @@ b. User Stories (WHAT they need and WHY)
 19.	Activity Log: Users shall see a history of their own posts and interactions.
 20.	Terms of Service: Users must agree to terms before posting.
 
+b.Acceptance Criteria (When we know it WORKS correctly)
+
+
+4. Non-Functional Requirements (NFR)
+1.	Availability: System shall be available 99.9% of the time.
+2.	Response Time: Pages must load in under 2 seconds.
+3.	Concurrency: System must support 500 concurrent users.
+4.	Mobile-First: The UI must be fully responsive for mobile devices.
+5.	Data Encryption: All user passwords must be hashed using bcrypt.
+6.	SSL: All data transmission must be over HTTPS.
+7.	Database Backup: Daily backups of the database must be performed.
+8.	Scalability: System should be deployable via Docker for easy scaling.
+9.	Usability: A new user should be able to post an item in under 3 minutes.
+10.	Privacy: User phone numbers must remain hidden unless the user chooses to share them.
+11.	Maintainability: Code must follow PEP8 (if Python) or Airbnb Style Guide (if JS).
+12.	Recoverability: System must recover from a crash within 15 minutes.
+13.	Accessibility: The site must meet WCAG 2.1 Level AA standards (for color contrast).
+14.	Audit Trail: All admin actions must be logged.
+15.	Browser Compatibility: Must support Chrome, Firefox, and Safari.
+16.	Search Efficiency: Database queries for searches must be indexed.
+17.	File Size Limit: Images must be compressed to under 2MB before storage.
+18.	Session Timeout: Idle users should be logged out after 30 minutes.
+19.	Test Coverage: Backend code must have at least 80% unit test coverage.
+20.	Localization: Date formats must adapt to the user's region (DD/MM/YYYY).
+
+b.Acceptance Criteria
+
+
+5. Application Specifications (How the system is built technically)
