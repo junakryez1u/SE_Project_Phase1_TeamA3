@@ -1,0 +1,58 @@
+1. Chosen Development Model
+Model: Agile (Scrum)
+Justification: A Lost and Found system requires frequent feedback on the UI/UX to ensure users can easily report items.
+Agile allows for iterative development, enabling us to test the matching algorithm and notification system in sprints.
+
+2. User Requirements
+a. Stakeholders (WHO is involved)
+* End-Users (Losers & Finders):
+    Role: The primary users who create posts, search for items, and communicate to arrange returns.
+    Interest: Finding their lost property quickly or ensuring a found item reaches its rightful owner safely.
+* System Administrators:
+    Role: Responsible for overseeing the platform, managing user disputes, and moderating content.
+    Interest: Maintaining a clean, spam-free environment and ensuring the system runs smoothly.
+* University/Organization Security (Optional Stakeholder):
+    Role: Often act as the physical "holding point" for items.
+    Interest: Having a digital log of what is currently in the physical lost and found office to reduce manual paperwork.
+* Developers:
+    Role: Technical team responsible for building, updating, and fixing bugs in the application.
+    Interest: Building a scalable, bug-free system with high performance.
+* Database Managers:
+    Role: Specifically focused on data integrity and security.
+    Interest: Ensuring that user data and uploaded images are stored securely and efficientl
+
+b. User Stories (WHAT they need and WHY)
+1.	As a Loser, I want to post a detailed description of my lost item so that others can identify it.
+2.	As a Finder, I want to upload a photo of an item I found so that the owner can recognize it visually.
+3.	As a Loser, I want to filter items by category (electronics, keys, etc.) so that I can find my item faster.
+4.	As a Finder, I want to set a "Safe Meeting Point" so that I can return the item securely.
+5.	As a User, I want to receive a push notification when a potential match is found so that I don't have to check the app constantly.
+6.	As a User, I want to message a finder/loser within the app so that I don't have to share my private phone number.
+7.	As an Admin, I want to flag and remove suspicious or "prank" posts so that the platform remains trustworthy.
+8.	As a Loser, I want to mark an item as "Recovered" so that it no longer appears in the active search list.
+9.	As a User, I want to search by "Last Seen Location" on a map so that I can see items found in specific areas.
+10.	As a Guest, I want to browse found items without an account so that I can see if my item is there before signing up.
+
+
+3.Functional Requirements (FR)
+1.	Registration: System shall allow users to register via email/password.
+2.	Login: System shall authenticate users.
+3.	Create Post: Users shall be able to create "Lost" or "Found" posts.
+4.	Image Upload: System shall support JPG/PNG uploads for items.
+5.	Category Selection: System shall provide a dropdown of at least 10 item categories.
+6.	Search Bar: System shall allow keyword searching in titles and descriptions.
+7.	Location Tagging: System shall integrate a Map API for pinning locations.
+8.	Status Update: System shall allow users to change post status to "Resolved."
+9.	In-App Chat: System shall provide a real-time text interface between two users.
+10.	Matching Algorithm: System shall automatically notify users if a "Lost" post matches a "Found" post's keywords.
+11.	User Profile: Users shall be able to edit their contact details and profile picture.
+12.	Admin Dashboard: Admins shall have a view of all active posts.
+13.	Delete Post: Users shall be able to delete their own posts.
+14.	Password Reset: System shall send a reset link via email.
+15.	Report Post: Users shall be able to report a post for "Inappropriate Content."
+16.	Filter by Date: Users shall be able to filter results by the date the item was lost/found.
+17.	Notification Settings: Users shall be able to toggle email vs. push notifications.
+18.	Multi-language Support: System shall support English and one local language.
+19.	Activity Log: Users shall see a history of their own posts and interactions.
+20.	Terms of Service: Users must agree to terms before posting.
+
