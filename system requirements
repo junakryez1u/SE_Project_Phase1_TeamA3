@@ -226,9 +226,6 @@ Localization must be automatically detected.
 
 5. Application Specifications (How the system is built technically)
 a. Architecture
-
-The system follows a three-tier architecture consisting of:
-
 Frontend (Client-side):
 Built using HTML, CSS, and JavaScript. It provides the user interface where users can submit lost/found items, search, and navigate through the system.
 Backend (Server-side):
@@ -237,9 +234,6 @@ Database:
 Stores user data, posts, messages, and system logs.
 
 b. Database Model
-
-The system database includes the following main tables:
-
 1.Users:
 id (Primary Key)
 email (Unique)
