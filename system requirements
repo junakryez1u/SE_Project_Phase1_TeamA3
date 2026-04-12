@@ -57,6 +57,86 @@ b. User Stories (WHAT they need and WHY)
 20.	Terms of Service: Users must agree to terms before posting.
 
 b.Acceptance Criteria (When we know it WORKS correctly)
+1.Registration:
+User enters valid email and password
+System creates a new account
+Confirmation message is shown
+2.Login:
+User enters valid credentials
+System verifies user data
+User is redirected to dashboard
+Error message is shown for invalid login
+3.Create Post:
+User selects "Lost" or "Found"
+User fills required fields
+Post is saved and displayed
+4.Image Upload:
+User uploads JPG/PNG image
+System accepts valid format
+Image is displayed in the post
+5.Category Selection:
+User opens dropdown menu
+At least 10 categories are shown
+Selected category is saved
+6.Search Bar:
+User enters keyword
+System searches titles/descriptions
+Matching results are displayed
+7.Location Tagging:
+User selects location on map
+Location is saved with post
+Location is visible to others
+8.Status Update:
+User selects "Resolved"
+System updates post status
+Updated status is displayed
+9.In-App Chat:
+Two users open chat
+Messages are sent and received instantly
+Chat history is visible
+10.Matching Algorithm:
+System compares keywords automatically
+Matching posts are detected
+11.User receives :
+User edits profile details
+Changes are saved successfully
+Updated info is displayed
+12.Admin Dashboard:
+Admin logs in
+All active posts are visible
+Admin can view post details
+13.Delete Post:
+User selects delete option
+System removes the post
+Post is no longer visible
+14.Password Reset:
+User requests password reset
+System sends email link
+User sets a new password
+15.Report Post:
+User clicks report button
+User selects reason
+Report is submitted to admin
+16.Filter by Date:
+User selects date filter
+System filters results
+Filtered posts are displayed
+17.Notification Settings:
+User toggles notification type
+Preference is saved
+Notifications follow selected option
+18.Multi-language Support:
+User selects language
+System updates interface language
+All labels change accordingly
+19.Activity Log:
+User opens activity history
+All past posts/interactions are shown
+Data is displayed correctly
+20.Terms of Service:
+User is shown terms before posting
+User must accept terms
+Posting is blocked if not accepted
 
 
 4. Non-Functional Requirements (NFR)
@@ -82,6 +162,149 @@ b.Acceptance Criteria (When we know it WORKS correctly)
 20.	Localization: Date formats must adapt to the user's region (DD/MM/YYYY).
 
 b.Acceptance Criteria
+1.Availability:
+System uptime must be at least 99.9% per month.
+Total downtime must not exceed 43 minutes per month.
+2.Response Time:
+95% of pages must load in under 2 seconds.
+No request should take longer than 4 seconds.
+3.Concurrency:
+System must support at least 500 concurrent users.
+Resource usage (CPU/Memory) must remain below 80% under load.
+4.Mobile-Firsta:
+UI must function correctly on screens as small as 320px.
+No horizontal scrolling should be required.
+5.Data Encryption:
+100% of user passwords must be hashed using bcrypt.
+No passwords should be stored in plain text.
+6.SSL:
+All data must be transmitted over HTTPS.
+All HTTP requests must be automatically redirected to HTTPS.
+7.Database Backup:
+Backups must be performed every 24 hours.
+Data must be restorable within 10 minutes.
+8.Scalability:
+System must be deployable using Docker without code changes.
+New instances must be scalable within 5 minutes.
+9.Usability:
+90% of new users must be able to post an item within 3 minutes.
+The posting process must not exceed 5 steps.
+10.Privacy:
+User phone numbers must be hidden by default.
+No unauthorized exposure of user data is allowed.
+11.Maintainability:
+Code must fully follow PEP8 or Airbnb Style Guide.
+Code reviews must show no critical issues.
+12.Recoverability:
+System must recover from crashes within 15 minutes.
+Data loss must not exceed 5 minutes.
+13.Accessibility:
+Must comply with WCAG 2.1 Level AA standards.
+Users must be able to navigate using a keyboard.
+14.Audit Trail:
+All admin actions must be logged.
+Logs must be stored for at least 30 days.
+15.Browser Compatibility:
+System must function correctly on Chrome, Firefox, and Safari.
+No critical bugs allowed on these browsers.
+16.Search Efficiency:
+Search results must be returned within 1 second.
+All search queries must use indexed fields.
+17.File Size Limit:
+Images must be compressed to under 2MB.
+Upload must be rejected if file exceeds 5MB before compression.
+18.Session Timeout:
+Users must be logged out after 30 minutes of inactivity.
+A warning must be shown 5 minutes before logout.
+19.Test Coverage:
+Backend code must have at least 80% unit test coverage.
+All tests must pass without errors.
+20.Localization:
+Date formats must adapt to the user’s region.
+Localization must be automatically detected.
 
 
 5. Application Specifications (How the system is built technically)
+a. Architecture
+
+The system follows a three-tier architecture consisting of:
+
+Frontend (Client-side):
+Built using HTML, CSS, and JavaScript. It provides the user interface where users can submit lost/found items, search, and navigate through the system.
+Backend (Server-side):
+Handles business logic such as user authentication, post creation, matching algorithm, and notifications.
+Database:
+Stores user data, posts, messages, and system logs.
+
+b. Database Model
+
+The system database includes the following main tables:
+
+1.Users:
+id (Primary Key)
+email (Unique)
+password
+phone
+profile_image
+2.Posts:
+id (Primary Key)
+user_id (Foreign Key → Users)
+title
+description
+category
+location
+status (Lost/Found/Resolved)
+image
+3.Messages:
+id (Primary Key)
+sender_id (FK → Users)
+receiver_id (FK → Users)
+message_text
+timestamp
+4.Reports:
+id (Primary Key)
+post_id (FK → Posts)
+reason
+5.Relationships:
+One user can create many posts
+Each post belongs to one user
+Messages connect two users
+Each report is linked to one post
+
+c. Technologies Used
+Frontend: HTML, CSS, JavaScript
+→ Chosen for simplicity and responsiveness
+Backend: Python/Django
+→ Used for handling logic, authentication, and APIs
+Database: SQLite
+→ Efficient data storage and querying
+
+d. User Interface Design
+1.Top Bar & Header:
+Contains login links and navigation (Submit Lost Item, Submit Found Item, View Posts)
+2.Hero Section (Main Area):
+Form for submitting lost/found items
+Input fields for item name and location
+Buttons for submitting posts
+3.Process Section:
+Displays step-by-step instructions on how the system works
+4.Industries Section:
+Shows categories like airport, hotel, taxi, restaurant, etc.
+5.Footer:
+Contains contact info, links, and social media
+
+e. Security Measures
+1.Authentication:
+Users must log in using email and password
+2.Password Encryption:
+Passwords are hashed using bcrypt before storage
+3.HTTPS (SSL):
+All data is transmitted securely
+4.Access Control:
+Only authorized users can edit or delete their posts
+Admins have special permissions
+5.Data Privacy:
+Sensitive information (like phone numbers) is hidden unless shared
+6.Session Management:
+Users are automatically logged out after inactivity
+
