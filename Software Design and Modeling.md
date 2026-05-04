@@ -39,7 +39,7 @@ Class Diagram
 
 Sequence Diagrams
 
-
+![sequence](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/Sequence%20Diagrams.drawio.png)
 
 
 3. Modeling
