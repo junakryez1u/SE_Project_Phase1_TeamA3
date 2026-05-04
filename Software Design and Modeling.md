@@ -55,6 +55,6 @@ Flowchart1-submit lost or found items
 
 Flowchart2-business registration
 
-
+![Flowchart](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/flowchart2.drawio.png)
 
 State Diagrams
