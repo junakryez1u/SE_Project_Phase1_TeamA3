@@ -43,6 +43,7 @@ Found Item Submission - forms where finders submit found items by location/indus
 2. Detailed Design
 Class Diagram
 
+![class](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/WhatsApp%20Image%202026-05-04%20at%209.36.05%20PM.jpeg)
 
 
 Sequence Diagrams
