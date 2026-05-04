@@ -48,8 +48,9 @@ Use Case Diagram
 
 
 Activity Diagrams
-
+Flowchart1-submit lost or found items
 ![Flowchart](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/flowchart1.drawio.png)
 
+Flowchart2-business registration
 
 State Diagrams
