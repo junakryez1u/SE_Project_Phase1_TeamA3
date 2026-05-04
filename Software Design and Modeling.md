@@ -29,6 +29,7 @@
 
 Component Diagram (UML)
 
+![UML](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/UML%20DIAGRAM1.png)
 
 
 2. Detailed Design
