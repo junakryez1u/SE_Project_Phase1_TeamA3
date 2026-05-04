@@ -68,3 +68,7 @@ Flowchart2-business registration
 State Diagrams
 
 ![state](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/statediagram1.drawio.png)
+
+
+![state](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/WhatsApp%20Image%202026-05-02%20at%203.46.31%20PM.jpeg)
+
