@@ -59,4 +59,4 @@ Flowchart2-business registration
 
 State Diagrams
 
-![state](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/statediagram1%20(1).drawio)
+![state](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/statediagram1.drawio.png)
