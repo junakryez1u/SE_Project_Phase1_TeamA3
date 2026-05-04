@@ -75,3 +75,7 @@ State Diagrams
 
 
 ![state](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/WhatsApp%20Image%202026-05-02%20at%2010.44.28%20PM.jpeg)
+
+
+
+For the diagrams we use the website diagrams.net
