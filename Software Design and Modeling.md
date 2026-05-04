@@ -32,6 +32,14 @@ Component Diagram (UML)
 ![UML](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/UML%20DIAGRAM1.png)
 
 
+Item Reporting — manages submission of lost and found items via the homepage form and modal
+loser/finder — handles customer login and business registration/login accounts
+Item Matching — processes category and location data to find matches between lost and found submissions
+Industry Pages - where each industry's lost & found info is displayed
+Found Item Submission - forms where finders submit found items by location/industry
+
+
+
 2. Detailed Design
 Class Diagram
 
