@@ -45,7 +45,7 @@ Sequence Diagrams
 3. Modeling
 Use Case Diagram
 
-
+![usecase](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/use%20case%20diagram.png)
 
 Activity Diagrams
 
