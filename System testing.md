@@ -207,7 +207,7 @@ Test results are interpreted as follows:
 •FAILED — The function returned an unexpected result. The assert statement raised an AssertionError, showing the actual vs. expected output.
 •ERROR — The test could not run due to a syntax or runtime error in the code.
 
-![screenshot1](
+![screenshot1](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/WhatsApp%20Image%202026-05-12%20at%207.13.51%20PM.jpeg)
 
 
 ![screenshot2](
