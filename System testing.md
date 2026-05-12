@@ -210,7 +210,7 @@ Test results are interpreted as follows:
 ![screenshot1](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/WhatsApp%20Image%202026-05-12%20at%207.13.51%20PM.jpeg)
 
 
-![screenshot2](
+![screenshot2](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/WhatsApp%20Image%202026-05-12%20at%207.14.03%20PM.jpeg)
 
 
 ![screenshot3](
