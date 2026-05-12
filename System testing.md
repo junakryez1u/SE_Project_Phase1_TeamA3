@@ -30,6 +30,7 @@ The system is built in HTML and JavaScript with no backend framework. To write e
 
 Test Code — Component 1: Item Submission Form
 
+
 # Simulated logic from java.js — Item Submission Form
 
 def submit_item(item_name, location, category, date, item_type):
@@ -85,11 +86,7 @@ Test cases were designed to cover three types of scenarios for each component:
 
 Test Cases — Component 1: Item Submission Form
 
-
-
-
-
-
+![table2](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/Screenshot%202026-05-12%20192434.png)
 
 
 
