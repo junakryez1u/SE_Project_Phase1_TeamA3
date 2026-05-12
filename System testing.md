@@ -216,7 +216,7 @@ Test results are interpreted as follows:
 ![screenshot3](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/WhatsApp%20Image%202026-05-12%20at%207.14.31%20PM.jpeg)
 
 
-![screenshot4](
+![screenshot4](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/WhatsApp%20Image%202026-05-12%20at%207.21.38%20PM.jpeg)
 
 
 7. Test Coverage and Reflection
