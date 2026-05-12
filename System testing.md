@@ -31,7 +31,7 @@ The system is built in HTML and JavaScript with no backend framework. To write e
 Test Code — Component 1: Item Submission Form
 
 
-# Simulated logic from java.js — Item Submission Form
+# Simulated logic from  — Item Submission Form
 
 def submit_item(item_name, location, category, date, item_type):
     if not item_name or not item_name.strip():
@@ -92,6 +92,58 @@ Test Cases — Component 1: Item Submission Form
 
 Test Code — Component 2: Business Registration Form
 
+# Simulated logic from  — Business Registration
+
+registered_emails = []
+
+def register_business(name, email, business_type, password):
+    if not name or not name.strip():
+        return 'Validation error: name required'
+    if not email or '@' not in email:
+        return 'Validation error: valid email required'
+    if not business_type or not business_type.strip():
+        return 'Validation error: business type required'
+    if not password or not password.strip():
+        return 'Validation error: password required'
+    if email in registered_emails:
+        return 'Error: email already registered'
+    registered_emails.append(email)
+    return 'Account created, success message shown'
+
+def test_valid_registration():
+    registered_emails.clear()
+    result = register_business('Juna Kryeziu', 'juna@business.com', 'Hotel', 'Secure123')
+    assert result == 'Account created, success message shown'
+
+def test_empty_name():
+    result = register_business('', 'juna@business.com', 'Hotel', 'Secure123')
+    assert result == 'Validation error: name required'
+
+def test_invalid_email():
+    result = register_business('Juna', 'not-an-email', 'Hotel', 'Secure123')
+    assert result == 'Validation error: valid email required'
+
+def test_empty_email():
+    result = register_business('Juna', '', 'Hotel', 'Secure123')
+    assert result == 'Validation error: valid email required'
+
+def test_empty_business_type():
+    result = register_business('Juna', 'juna@b.com', '', 'Secure123')
+    assert result == 'Validation error: business type required'
+
+def test_empty_password():
+    result = register_business('Juna', 'juna@b.com', 'Hotel', '')
+    assert result == 'Validation error: password required'
+
+def test_duplicate_email():
+    registered_emails.clear()
+    register_business('Juna', 'juna@business.com', 'Hotel', 'Secure123')
+    result = register_business('Juna', 'juna@business.com', 'Hotel', 'Secure123')
+    assert result == 'Error: email already registered'
+
+
+    Test Code — Component 2: Business Registration Form
+
 # Simulated logic from business.js — Business Registration
 
 registered_emails = []
@@ -140,6 +192,55 @@ def test_duplicate_email():
     register_business('Juna', 'juna@business.com', 'Hotel', 'Secure123')
     result = register_business('Juna', 'juna@business.com', 'Hotel', 'Secure123')
     assert result == 'Error: email already registered'
+
+def test_spaces_only_password():
+    result = register_business('Juna', 'juna@b.com', 'Hotel', '   ')
+    assert result == 'Validation error: password required'
+
+6. Running Tests
+The tests were executed using Python 3 in the terminal. All test functions were placed in a single file named test_lost_found.py and run with the following command:
+
+python -m pytest test_lost_found.py -v
+
+Test results are interpreted as follows:
+•PASSED — The function returned the expected result for the given input. The assert statement did not raise an error.
+•FAILED — The function returned an unexpected result. The assert statement raised an AssertionError, showing the actual vs. expected output.
+•ERROR — The test could not run due to a syntax or runtime error in the code.
+
+![screenshot1](
+
+
+![screenshot2](
+
+
+![screenshot3](
+
+
+![screenshot4](
+
+
+7. Test Coverage and Reflection
+Test coverage refers to how thoroughly the tests exercise the code paths, conditions, and possible failure modes of a component.
+
+For the Item Submission Form, the tests cover:
+•All required fields individually (name, location, category, date, type).
+•All fields empty at once.
+•Whitespace-only inputs which should be treated as empty.
+•Very long inputs and special characters including script injection.
+
+For the Business Registration Form, the tests cover:
+•All four required fields individually (name, email, type, password).
+•Invalid email format (missing @ symbol).
+•All fields empty at once.
+•Whitespace-only password.
+•Duplicate email registration to prevent multiple accounts with the same email.
+
+What could still be improved:
+•Integration tests that test the full form-to-database flow in the browser environment.
+•Testing the modal open/close behaviour (openForm and closeForm functions) with a browser automation tool such as Selenium or Playwright.
+•Testing that the correct industry page loads when a user selects a venue from the dropdown.
+•Performance testing to verify behaviour when a large number of items are submitted simultaneously.
+
 
 
 
