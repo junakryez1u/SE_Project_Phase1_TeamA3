@@ -22,6 +22,128 @@ This component is important because it controls who can access the business dash
 
 Test Cases — Component 2: Business Registration Form
 
-![table1](
+![table1](https://github.com/junakryez1u/SE_Project_Phase1_TeamA3/raw/main/Screenshot%202026-05-12%20191932.png)
+
+
+5. Writing Test Code
+The system is built in HTML and JavaScript with no backend framework. To write executable tests, the core validation logic from java.js and business.js was simulated in Python, following the same conditional structure present in the original code. Each test function uses assert statements to verify that the function returns the correct result for a given input.
+
+Test Code — Component 1: Item Submission Form
+
+# Simulated logic from java.js — Item Submission Form
+
+def submit_item(item_name, location, category, date, item_type):
+    if not item_name or not item_name.strip():
+        return 'Validation error: item name required'
+    if not location:
+        return 'Validation error: location required'
+    if not category:
+        return 'Validation error: category required'
+    if not date:
+        return 'Validation error: date required'
+    if item_type not in ['lost', 'found']:
+        return 'Validation error: item type required'
+    return 'Item report saved successfully'
+
+def test_valid_lost_submission():
+    result = submit_item('Blue Backpack', 'Airport', 'Luggage', '2026-05-01', 'lost')
+    assert result == 'Item report saved successfully'
+
+def test_valid_found_submission():
+    result = submit_item('Black Wallet', 'Hotel', 'Accessories', '2026-05-10', 'found')
+    assert result == 'Item report saved successfully'
+
+def test_empty_item_name():
+    result = submit_item('', 'Airport', 'Luggage', '2026-05-01', 'lost')
+    assert result == 'Validation error: item name required'
+
+def test_no_location():
+    result = submit_item('Phone', '', 'Electronics', '2026-05-01', 'lost')
+    assert result == 'Validation error: location required'
+
+def test_no_category():
+    result = submit_item('Keys', 'Taxi', '', '2026-05-01', 'lost')
+    assert result == 'Validation error: category required'
+
+def test_no_date():
+    result = submit_item('Laptop', 'College', 'Electronics', '', 'lost')
+    assert result == 'Validation error: date required'
+
+def test_all_fields_empty():
+    result = submit_item('', '', '', '', '')
+    assert result == 'Validation error: item name required'
+
+def test_spaces_only_name():
+    result = submit_item('   ', 'Airport', 'Luggage', '2026-05-01', 'lost')
+    assert result == 'Validation error: item name required'
+
+    4. Preparing Test Cases
+Test cases were designed to cover three types of scenarios for each component:
+•Normal/valid inputs — confirming the happy path works correctly.
+•Invalid inputs — checking that bad data is rejected with a clear error.
+•Edge/boundary cases — testing empty strings, whitespace-only values, special characters, and duplicate entries.
+
+Test Cases — Component 1: Item Submission Form
+
+
+
+
+
+
+
+
+
+Test Code — Component 2: Business Registration Form
+
+# Simulated logic from business.js — Business Registration
+
+registered_emails = []
+
+def register_business(name, email, business_type, password):
+    if not name or not name.strip():
+        return 'Validation error: name required'
+    if not email or '@' not in email:
+        return 'Validation error: valid email required'
+    if not business_type or not business_type.strip():
+        return 'Validation error: business type required'
+    if not password or not password.strip():
+        return 'Validation error: password required'
+    if email in registered_emails:
+        return 'Error: email already registered'
+    registered_emails.append(email)
+    return 'Account created, success message shown'
+
+def test_valid_registration():
+    registered_emails.clear()
+    result = register_business('Juna Kryeziu', 'juna@business.com', 'Hotel', 'Secure123')
+    assert result == 'Account created, success message shown'
+
+def test_empty_name():
+    result = register_business('', 'juna@business.com', 'Hotel', 'Secure123')
+    assert result == 'Validation error: name required'
+
+def test_invalid_email():
+    result = register_business('Juna', 'not-an-email', 'Hotel', 'Secure123')
+    assert result == 'Validation error: valid email required'
+
+def test_empty_email():
+    result = register_business('Juna', '', 'Hotel', 'Secure123')
+    assert result == 'Validation error: valid email required'
+
+def test_empty_business_type():
+    result = register_business('Juna', 'juna@b.com', '', 'Secure123')
+    assert result == 'Validation error: business type required'
+
+def test_empty_password():
+    result = register_business('Juna', 'juna@b.com', 'Hotel', '')
+    assert result == 'Validation error: password required'
+
+def test_duplicate_email():
+    registered_emails.clear()
+    register_business('Juna', 'juna@business.com', 'Hotel', 'Secure123')
+    result = register_business('Juna', 'juna@business.com', 'Hotel', 'Secure123')
+    assert result == 'Error: email already registered'
+
+
 
 
